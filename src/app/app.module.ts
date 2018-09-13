@@ -1,25 +1,35 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { NgReduxModule, NgRedux} from '@angular-redux/store'
+import { NgModule, isDevMode } from '@angular/core';
+import { NgReduxModule, NgRedux, DevToolsExtension} from '@angular-redux/store'
 import { AppComponent } from './app.component';
 import { IAppstate, rootReducer, INITIAL_STATE } from './store';
+import { LoginComponent } from './login/login.component';
+import { RouterModule} from '@angular/router';
+import { ReactiveFormsModule} from '@angular/forms';
+import { HttpModule} from '@angular/http';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule, 
-    NgReduxModule
+    NgReduxModule,
+    RouterModule,
+    ReactiveFormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { 
 
-  constructor (ngRedux: NgRedux<IAppstate>){
+  constructor (ngRedux: NgRedux<IAppstate>, devTools: DevToolsExtension){
     //inicializa la store
-    ngRedux.configureStore(rootReducer, INITIAL_STATE)
+    var enhancers = isDevMode() ? [devTools.enhancer()] : [];
+
+    ngRedux.configureStore(rootReducer, INITIAL_STATE, [], enhancers)
   }
 
 }

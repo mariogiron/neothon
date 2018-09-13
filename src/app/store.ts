@@ -1,12 +1,20 @@
+import { SIGN_IN_TOKEN } from "./actions";
+import {tassign} from 'tassign';
 
 export interface IAppstate{
-    contador: number;
+    token: string;
 }
 
 export const INITIAL_STATE: IAppstate = {
-    contador: 0
+    token: ""
 }
 
 export function rootReducer (state, action){
-    return state;
+
+    switch(action.type){
+        case SIGN_IN_TOKEN: {
+           return tassign(state, {token: action.data});
+        }
+    }
+    return state
 }
