@@ -7,18 +7,25 @@ import { LoginComponent } from './login/login.component';
 import { RouterModule} from '@angular/router';
 import { ReactiveFormsModule} from '@angular/forms';
 import { HttpModule} from '@angular/http';
+import { appRoutes } from './app.routing';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ClassDetailComponent } from './class-detail/class-detail.component';
+import { StudentDetailComponent } from './student-detail/student-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    DashboardComponent,
+    ClassDetailComponent,
+    StudentDetailComponent
   ],
   imports: [
     BrowserModule, 
     NgReduxModule,
-    RouterModule,
     ReactiveFormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [],
   bootstrap: [AppComponent]
