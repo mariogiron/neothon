@@ -13,6 +13,8 @@ import { LoginComponent } from './login/login.component';
 import { IAppstate, INITIAL_STATE, rootReducer } from './store';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { ClassCardsComponent } from './class-cards/class-cards.component';
+import { StudentCardsComponent } from './student-cards/student-cards.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { ClassCardsComponent } from './class-cards/class-cards.component';
     DashboardComponent,
     ClassDetailComponent,
     StudentDetailComponent,
-    ClassCardsComponent
+    ClassCardsComponent,
+    StudentCardsComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,

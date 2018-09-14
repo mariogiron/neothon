@@ -12,5 +12,11 @@ export class UserService {
     let url = 'https://neothon.ngrok.io/api/users/login';
     return this.http.post(url, pUserData).toPromise();
   }
+
+  getStudents(idClase){
+    let url = `https://neothon.ngrok.io/api/students/${idClase}`;
+    console.log(url)
+    return this.http.get(url).toPromise();
+  }
 }
 
