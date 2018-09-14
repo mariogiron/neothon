@@ -1,15 +1,16 @@
+import { DevToolsExtension, NgRedux, NgReduxModule } from '@angular-redux/store';
+import { isDevMode, NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, isDevMode } from '@angular/core';
-import { NgReduxModule, NgRedux, DevToolsExtension} from '@angular-redux/store'
+import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
-import { IAppstate, rootReducer, INITIAL_STATE } from './store';
-import { LoginComponent } from './login/login.component';
-import { RouterModule} from '@angular/router';
-import { ReactiveFormsModule} from '@angular/forms';
-import { HttpModule} from '@angular/http';
 import { appRoutes } from './app.routing';
-import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClassDetailComponent } from './class-detail/class-detail.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { LoginGuard } from './login.guard';
+import { LoginComponent } from './login/login.component';
+import { IAppstate, INITIAL_STATE, rootReducer } from './store';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
 
 @NgModule({
@@ -21,22 +22,29 @@ import { StudentDetailComponent } from './student-detail/student-detail.componen
     StudentDetailComponent
   ],
   imports: [
-    BrowserModule, 
+    BrowserModule,
     NgReduxModule,
     ReactiveFormsModule,
     HttpModule,
     RouterModule.forRoot(appRoutes)
   ],
-  providers: [],
+  providers: [LoginGuard],
   bootstrap: [AppComponent]
 })
-export class AppModule { 
+export class AppModule {
 
   constructor (ngRedux: NgRedux<IAppstate>, devTools: DevToolsExtension){
     //inicializa la store
     var enhancers = isDevMode() ? [devTools.enhancer()] : [];
 
-    ngRedux.configureStore(rootReducer, INITIAL_STATE, [], enhancers)
+    let estado_inicial = null
+    if (localStorage.getItem('redux_data')) {
+      estado_inicial = JSON.parse(localStorage.getItem('redux_data'))
+    } else {
+      estado_inicial = INITIAL_STATE
+    }
+
+    ngRedux.configureStore(rootReducer, estado_inicial, [], enhancers)
   }
 
 }
