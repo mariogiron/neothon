@@ -13,6 +13,7 @@ import { ClassDetailComponent } from './class-detail/class-detail.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { ClassCardsComponent } from './class-cards/class-cards.component';
 import { StudentCardsComponent } from './student-cards/student-cards.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { StudentCardsComponent } from './student-cards/student-cards.component';
     ClassDetailComponent,
     StudentDetailComponent,
     ClassCardsComponent,
-    StudentCardsComponent
+    StudentCardsComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule, 

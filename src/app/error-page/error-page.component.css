@@ -1,14 +1,11 @@
 .classDetail{
     padding-top: 54px;
-}
-
-.header{
-    padding: 0;
-    margin-bottom: 73px;
+    margin: 15px;
 }
 
 .header .logo{
     height: 26px;
+    float: left;
 }
 
 .header .btnVolver{
@@ -24,6 +21,7 @@
 .header .btnVolver:hover{
     background-color: #454545;
     transition: 0.7s;
+
 }
 
 .header .btnVolver p{
@@ -33,25 +31,32 @@
     text-align: center;
 }
 
-.lista{
-    font-family: 'Lato', sans-serif;
-    color: #444444;
-    font-size: 24px;
-    display: block;
-    width: 100%;
-    margin-bottom: 37px;
-}
-
-.lista span{
-    font-weight: 700;
-}
-
 .fa{
     padding-right: 5px;
     font-size: 18px;
 }
 
-.studentCards{
-    padding: 0;
-    margin-bottom: 15px;
+.mensajeError{
+    text-align: center;
+    font-family: Lato;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #444444;
+}
+
+.parrafoBig{
+    margin-top: 49px;
+    font-size: 60px;
+}
+
+.parrafoSmall{
+    font-size: 40px;
+}
+
+.image{
+    width: 370px;
+    margin: 0 auto;
 }
