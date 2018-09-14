@@ -2,9 +2,13 @@
     padding-top: 54px;
 }
 
+.header{
+    padding: 0;
+    margin-bottom: 73px;
+}
+
 .header .logo{
     height: 26px;
-    float: left;
 }
 
 .header .btnVolver{
@@ -24,7 +28,25 @@
     text-align: center;
 }
 
+.lista{
+    font-family: 'Lato', sans-serif;
+    color: #444444;
+    font-size: 24px;
+    display: block;
+    width: 100%;
+    margin-bottom: 37px;
+}
+
+.lista span{
+    font-weight: 700;
+}
+
 .fa{
     padding-right: 5px;
     font-size: 18px;
+}
+
+.studentCards{
+    padding: 0;
+    margin-bottom: 15px;
 }

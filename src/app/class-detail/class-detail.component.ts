@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '../../../node_modules/@angular/router';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-class-detail',
@@ -8,14 +9,18 @@ import { ActivatedRoute } from '../../../node_modules/@angular/router';
 })
 export class ClassDetailComponent implements OnInit {
 
-  constructor(private activatedRoute: ActivatedRoute) { 
+  studentCards: any[];
+
+  constructor(private activatedRoute: ActivatedRoute, private userService: UserService) { 
     this.activatedRoute.params.subscribe((params) =>{
-      console.log(params.id);
+      this.userService.getStudents(params.id).then((response) => {
+        this.studentCards = response.json().students;
+      })
     })
   }
 
   ngOnInit() {
-    
+
   }
 
 }

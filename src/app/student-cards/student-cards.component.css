@@ -4,7 +4,7 @@
 }
 
 .card{
-    margin: 18px;
+    margin: 0;
     flex-direction: row !important;
     height: 130px;
     background-color: #ffffff;
@@ -19,7 +19,7 @@
 }
 
 .nombreAlumno{
-    margin-top: 43px;
+    margin-top: 40px;
     margin-left: 36px;
     height: 24px;
     display: block !important;
