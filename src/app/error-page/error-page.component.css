@@ -1,0 +1,56 @@
+.classDetail{
+    padding-top: 54px;
+    margin: 15px;
+}
+
+.header .logo{
+    height: 26px;
+    float: left;
+}
+
+.header .btnVolver{
+    float: right;
+    background-color: #444444;
+    height: 35px;
+    width: 170px;
+    border-radius: 100px;
+    padding-top: 2px;
+    cursor: pointer;
+}
+
+.header .btnVolver p{
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.fa{
+    padding-right: 5px;
+    font-size: 18px;
+}
+
+.mensajeError{
+    text-align: center;
+    font-family: Lato;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #444444;
+}
+
+.parrafoBig{
+    margin-top: 49px;
+    font-size: 60px;
+}
+
+.parrafoSmall{
+    font-size: 40px;
+}
+
+.image{
+    width: 370px;
+    margin: 0 auto;
+}
