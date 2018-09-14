@@ -12,6 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClassDetailComponent } from './class-detail/class-detail.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
 import { ClassCardsComponent } from './class-cards/class-cards.component';
+import { StudentCardsComponent } from './student-cards/student-cards.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ClassCardsComponent } from './class-cards/class-cards.component';
     DashboardComponent,
     ClassDetailComponent,
     StudentDetailComponent,
-    ClassCardsComponent
+    ClassCardsComponent,
+    StudentCardsComponent
   ],
   imports: [
     BrowserModule, 
