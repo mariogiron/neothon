@@ -1,7 +1,25 @@
-<form
-[formGroup]="form"
-(ngSubmit)="login(form.value)">
-  <input type="text" placeholder="Email" formControlName="email">
-  <input type="password" placeholder="Contraseña" formControlName="password">
-  <input type="submit" value="Login">
-</form>
+<div class="container-fluid login">
+  <div class="row">
+    <div class="col-6">
+        <img src="assets/images/slice@2x.png" alt="Alumnos de Neoland" class="imagenLogin">
+    </div>
+    <div class="formulario col-6">
+      <div class="container-fluid">
+        <div class="row">
+            <div class="col-8 logo">
+                <img src="assets/images/logo.png" alt="Logo Neoland Dojo">
+            </div>
+            <form
+            [formGroup]="form"
+            (ngSubmit)="login(form.value)" class="col-8">
+                <p>Email</p>
+                <input type="text" placeholder="Introduce tu email" formControlName="email">
+                <p>Contraseña</p>
+                <input type="password" placeholder="Introduce tu contraseña" formControlName="password">
+                <input type="submit" value="Login">
+            </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
