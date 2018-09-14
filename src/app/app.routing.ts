@@ -12,6 +12,5 @@ export const appRoutes: Routes = [
     {path: 'login', component: LoginComponent},
     {path: 'clase/:id', component: ClassDetailComponent},
     {path: 'alumno/:id', component: StudentDetailComponent},
-    {path: 'test', component: StudentCardsComponent},
     {path: '**', component: ErrorPageComponent},
 ]

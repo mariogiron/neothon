@@ -9,12 +9,17 @@
 
 .header .btnVolver{
     float: right;
-    background-color: #444444;
+    background-color: #f74848;
     height: 35px;
     width: 170px;
     border-radius: 100px;
     padding-top: 2px;
     cursor: pointer;
+}
+
+.header .btnVolver:hover{
+    background-color: #454545;
+    transition: 0.7s;
 }
 
 .header .btnVolver p{

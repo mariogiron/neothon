@@ -56,14 +56,6 @@
     border-radius: 23px;
     background-color: #f74848;
     border: 0px;
-}
-
-.cont{
-    width: 100%;
-    float: left;
-}
-
-.botonFicha{
     position: absolute;
     top: 42px;
     right: 117px;
@@ -71,7 +63,13 @@
 }
 
 .botonFicha:hover{
-    background-color: #a30000
+    background-color: #454545;
+    transition: 0.7s;
+}
+
+.cont{
+    width: 100%;
+    float: left;
 }
 
 .botonFicha p{
