@@ -1,0 +1,30 @@
+.classDetail{
+    padding-top: 54px;
+}
+
+.header .logo{
+    height: 26px;
+    float: left;
+}
+
+.header .btnVolver{
+    float: right;
+    background-color: #444444;
+    height: 35px;
+    width: 170px;
+    border-radius: 100px;
+    padding-top: 2px;
+    cursor: pointer;
+}
+
+.header .btnVolver p{
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    font-size: 20px;
+    text-align: center;
+}
+
+.fa{
+    padding-right: 5px;
+    font-size: 18px;
+}
