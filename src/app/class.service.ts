@@ -13,7 +13,7 @@ export class ClassService {
   }
 
   getAllClasses(token_id) {
-    let url = `${this.baseUrl}/`
+    let url = `${this.baseUrl}/all`
     return this.http.post(url, { token: token_id }).toPromise()
   }
 

@@ -12,6 +12,7 @@ import { LoginGuard } from './login.guard';
 import { LoginComponent } from './login/login.component';
 import { IAppstate, INITIAL_STATE, rootReducer } from './store';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { ClassCardsComponent } from './class-cards/class-cards.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { StudentDetailComponent } from './student-detail/student-detail.componen
     LoginComponent,
     DashboardComponent,
     ClassDetailComponent,
-    StudentDetailComponent
+    StudentDetailComponent,
+    ClassCardsComponent
   ],
   imports: [
     BrowserModule,

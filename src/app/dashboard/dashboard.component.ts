@@ -1,5 +1,6 @@
 import { NgRedux } from '@angular-redux/store';
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import { ClassService } from '../class.service';
 import { IAppstate } from '../store';
 
@@ -10,12 +11,30 @@ import { IAppstate } from '../store';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private classService: ClassService, private ngRedux: NgRedux<IAppstate>) { }
+  classes: any[]
+  user: any
+  formularioAddCourse: FormGroup
+
+  constructor(private classService: ClassService, private ngRedux: NgRedux<IAppstate>) {
+    this.classes = []
+    this.formularioAddCourse = new FormGroup({
+      nombre: new FormControl(''),
+      categoria: new FormControl(''),
+      fecha_inicio: new FormControl(''),
+      fecha_fin: new FormControl(''),
+      profesor: new FormControl('')
+    })
+  }
+
+  onSubmitNewCourse() {
+    console.log(this.formularioAddCourse.value)
+  }
 
   ngOnInit() {
     this.classService.getAllClasses(this.ngRedux.getState().token)
     .then(res => {
-      console.log(res.json())
+      this.user = res.json()
+      this.classes = this.user.clases
     })
   }
 

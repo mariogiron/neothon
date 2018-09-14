@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.ui.card{
+    /* box-shadow: 0 2px 3px 0 #d4d4d5, 0 0 3px 3px #d4d4d5 !important; */
+    box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.33);
+    border-radius: 0 !important;
+}
+
+.image img{
+  border-radius: 0 !important;
+}
+
+.cardTitle{
+    margin: 20px 0 20px 18px;
+    width: 199px;
+    height: 48px;
+    font-family: Lato;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 10px;
+    letter-spacing: normal;
+    color: #444444;
+}
+
+.cardTitle p{
+  line-height: 1.2;
+}
+
+.botonesCard p{
+    float: left;
+    margin-bottom: 21px;
+    height: 20px;
+    font-family: Lato;
+    font-size: 16px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    color: #f74848;
+}
+
+#lista{
+    margin-left: 18px;
+    cursor: pointer;
+}
+
+#estadisticas{
+    margin-left: 40px;
+}

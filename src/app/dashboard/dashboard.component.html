@@ -1,3 +1,54 @@
-<p>
-  dashboard works!
-</p>
+<div class="container">
+  <div class="row mt-5">
+    <div class="col-12">
+      <img src="assets/images/logo.png" class="screenprofesor">
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col-md-3 col-sm-6 col-xs-12" *ngFor="let clase of classes">
+      <app-class-cards [clase]="clase"></app-class-cards>
+    </div>
+    <div class="col-md-3 col-sm-6 col-xs-12 add_course text-center" data-toggle="modal" data-target="#addCourseModal">
+      <p class="">
+        <img src="assets/images/plus.png" class="img-plus"><br>
+        Añadir Curso
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="addCourseModal" tabindex="-1" role="dialog" aria-labelledby="addCourseModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Añadir Curso</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formularioAddCourse" (ngSubmit)="onSubmitNewCourse()">
+          <fieldset id="formulariocrear">
+            <label aria-label="nombre" class="LabelNombre">Nombre</label>
+            <input type="text" class="InputNombre" placeholder="Nombre del curso" formControlName="nombre">
+
+            <label aria-label="categoria" class="">Categoría</label>
+            <input type="text" class="CategoriaEmail" placeholder="Categoría del curso">
+
+            <label aria-label="telefono" class="">Fecha</label>
+            <input type="text" class="InputTelefono" placeholder="Teléfono del alumno">
+
+            <label aria-label="telefono" class="">Profesor</label>
+            <input type="text" class="InputTelefono" placeholder="Teléfono del alumno">
+
+          </fieldset>
+        </form>
+      </div>
+      <div class="modal-footer">
+
+        <button type="button" class="Btn">Añadir alumno</button>
+      </div>
+    </div>
+  </div>
+</div>
