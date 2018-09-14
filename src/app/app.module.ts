@@ -11,6 +11,7 @@ import { appRoutes } from './app.routing';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ClassDetailComponent } from './class-detail/class-detail.component';
 import { StudentDetailComponent } from './student-detail/student-detail.component';
+import { ClassCardsComponent } from './class-cards/class-cards.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StudentDetailComponent } from './student-detail/student-detail.componen
     LoginComponent,
     DashboardComponent,
     ClassDetailComponent,
-    StudentDetailComponent
+    StudentDetailComponent,
+    ClassCardsComponent
   ],
   imports: [
     BrowserModule, 
