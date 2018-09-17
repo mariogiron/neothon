@@ -3,6 +3,10 @@
     box-sizing: border-box;
 }
 
+*:focus {
+    outline: none;
+}
+
 .ui.card{
     /* box-shadow: 0 2px 3px 0 #d4d4d5, 0 0 3px 3px #d4d4d5 !important; */
     box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.33);

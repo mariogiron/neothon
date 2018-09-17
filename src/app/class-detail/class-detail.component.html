@@ -8,6 +8,8 @@
       </div>
     </div>
 
+    <input type="date" value="{{date}}">
+
     <p class="lista">Lista de alumnos de <span>Bootcamp Full-Stack. Jul-Sept. Madrid</span></p>
 
     <app-student-cards class="col-12 studentCards" *ngFor="let card of studentCards" [student]="card"></app-student-cards>
