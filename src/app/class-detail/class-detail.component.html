@@ -12,12 +12,55 @@
 
     <app-student-cards class="col-12 studentCards" *ngFor="let card of studentCards" [student]="card"></app-student-cards>
 
-    <div class="col-12 add_student">
+    <div class="col-12 add_student" data-toggle="modal" data-target="#addStudentModal" >
       <p class="plus_course">
         <img src="assets/images/plus.png" class="img-plus"><br>
         Añadir Curso
       </p>
     </div>
+  </div>
+</div>
 
+<!-- Modal -->
+<div class="modal fade" id="addStudentModal" tabindex="-1" role="dialog" aria-labelledby="addCourseModal" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <!-- <h5 class="modal-title" id="exampleModalLabel">Añadir Curso</h5> -->
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form [formGroup]="formularioAddCourse" (ngSubmit)="onSubmitNewCourse()">
+          <fieldset id="formulariocrear">
+            <label aria-label="nombre" class="LabelNombre">Curso</label>
+            <select class="input" formControlName="tipo">
+              <option *ngFor="let group of groups" [value]="group.idgroups">{{group.name}} / {{group.description}}</option>
+            </select>
+
+            <label aria-label="categoria" class="mt-4">Escuela</label>
+            <select class="input" formControlName="escuela">
+              <option *ngFor="let escuela of escuelas" [value]="escuela.idescuela">{{escuela.name}}</option>
+            </select>
+
+            <label aria-label="telefono" class="mt-4">Fecha Inicio</label>
+            <input type="date" class="inputFechaInicio" placeholder="Fecha de inicio del curso" formControlName="fecha_inicio">
+
+            <label aria-label="telefono" class="">Fecha Fin</label>
+            <input type="date" class="InputTelefono" placeholder="Fecha de finalización del curso" formControlName="fecha_fin">
+
+            <label aria-label="categoria" class="">Profesor</label>
+            <select class="input" formControlName="profesor">
+              <option *ngFor="let profesor of teachers" [value]="profesor.idusers">{{profesor.name}}
+                {{profesor.surname}}</option>
+            </select>
+          </fieldset>
+          <div class="text-center mb-3">
+            <input type="submit" value="Añadir Curso" class="Btn text-center mt-4">
+          </div>
+        </form>
+      </div>
+    </div>
   </div>
 </div>
