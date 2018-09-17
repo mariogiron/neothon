@@ -1,57 +1,79 @@
-.classDetail{
-    padding-top: 54px;
+.classDetail {
+  padding-top: 54px;
 }
 
-.header{
-    padding: 0;
-    margin-bottom: 73px;
+.header {
+  padding: 0;
+  margin-bottom: 73px;
 }
 
-.header .logo{
-    height: 26px;
+.header .logo {
+  height: 26px;
 }
 
-.header .btnVolver{
-    float: right;
-    background-color: #f74848;
-    height: 35px;
-    width: 170px;
-    border-radius: 100px;
-    padding-top: 2px;
-    cursor: pointer;
+.header .btnVolver {
+  float: right;
+  background-color: #f74848;
+  height: 35px;
+  width: 170px;
+  border-radius: 100px;
+  padding-top: 2px;
+  cursor: pointer;
 }
 
-.header .btnVolver:hover{
-    background-color: #454545;
-    transition: 0.7s;
+.header .btnVolver:hover {
+  background-color: #454545;
+  transition: 0.7s;
 }
 
-.header .btnVolver p{
-    font-family: 'Lato', sans-serif;
-    color: #fff;
-    font-size: 20px;
-    text-align: center;
+.header .btnVolver p {
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
 }
 
-.lista{
-    font-family: 'Lato', sans-serif;
-    color: #444444;
-    font-size: 24px;
-    display: block;
-    width: 100%;
-    margin-bottom: 37px;
+.lista {
+  font-family: 'Lato', sans-serif;
+  color: #444444;
+  font-size: 24px;
+  display: block;
+  width: 100%;
+  margin-bottom: 37px;
 }
 
-.lista span{
-    font-weight: 700;
+.lista span {
+  font-weight: 700;
 }
 
-.fa{
-    padding-right: 5px;
-    font-size: 18px;
+.fa {
+  padding-right: 5px;
+  font-size: 18px;
 }
 
-.studentCards{
-    padding: 0;
-    margin-bottom: 15px;
+.studentCards {
+  padding: 0;
+  margin-bottom: 15px;
+}
+
+.add_student {
+  margin: 0 0px 0 0px;
+  padding: 0px 15px 0 15px;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: regular;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
+  height: 128px;
+  background-color: #f74848;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.33);
+  cursor: pointer;
+  margin-top: 0 !important;
+}
+
+.plus_course{
+  font-size: 10px;
 }

@@ -2,15 +2,22 @@
   <div class="row">
 
     <div class="header col-12">
-        <img src="assets/images/logo.png" alt="Logo Neoland" class="logo">
-        <div class="btnVolver">
-          <p [routerLink]="['/']"><i class="fa fa-arrow-left"></i>Volver</p>
-        </div>
+      <img src="assets/images/logo.png" alt="Logo Neoland" class="logo">
+      <div class="btnVolver">
+        <p [routerLink]="['/']"><i class="fa fa-arrow-left"></i>Volver</p>
+      </div>
     </div>
 
     <p class="lista">Lista de alumnos de <span>Bootcamp Full-Stack. Jul-Sept. Madrid</span></p>
 
-    <app-student-cards  class="col-12 studentCards" *ngFor="let card of studentCards" [student]="card"></app-student-cards>
+    <app-student-cards class="col-12 studentCards" *ngFor="let card of studentCards" [student]="card"></app-student-cards>
+
+    <div class="col-12 add_student">
+      <p class="plus_course">
+        <img src="assets/images/plus.png" class="img-plus"><br>
+        Añadir Curso
+      </p>
+    </div>
 
   </div>
 </div>

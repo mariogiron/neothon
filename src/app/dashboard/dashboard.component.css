@@ -5,12 +5,8 @@
 }
 
 .add_course {
-  background-color: #f74848;
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.33);
-  cursor: pointer;
-
-  margin: 0 15px 0 15px;
-
+  margin: 0 0px 0 0px;
+  padding: 0px 15px 0 15px;
   font-family: Lato;
   font-size: 20px;
   font-weight: regular;
@@ -22,8 +18,17 @@
 
 }
 
-.add_course p{
-  margin-top: 150px;
+.add_course_container{
+  height: 100%;
+  background-color: #f74848;
+  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.33);
+  cursor: pointer;
+  margin-top: 0 !important;
+  padding-top: 150px;
+}
+
+.plus_course{
+  /* margin-top: 150px; */
 }
 
 form {
@@ -57,10 +62,32 @@ form {
 
 }
 
+.btnVolver{
+  float: right;
+  background-color: #f74848;
+  height: 35px;
+  width: 170px;
+  border-radius: 100px;
+  padding-top: 2px;
+  cursor: pointer;
+}
+
+.btnVolver:hover{
+  background-color: #454545;
+  transition: 0.7s;
+
+}
+
+.btnVolver p{
+  font-family: 'Lato', sans-serif;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+}
 
 #formulariocrear label {
   display: block;
-  width: 59px;
+  /* width: 59px; */
   height: 20px;
   font-size: 16px;
   font-weight: bold;
@@ -125,15 +152,32 @@ input{
   background-color: #f4f4f4;
 }
 
+.input{
+  width: 330px;
+  height: 43px;
+  border-radius: 6px;
+  background-color: #f4f4f4;
+  border: 0 !important;
+  padding-left: 15px;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 .Btn {
   border: 0;
-  margin: 0 auto;
+  /* margin: 0 auto; */
   width: 170px;
   height: 46px;
   border-radius: 23px;
   color: white;
   background-color: #f74848;
   transition: .7s;
+  cursor: pointer;
 }
 
 .Btn:hover {

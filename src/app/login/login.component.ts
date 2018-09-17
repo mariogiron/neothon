@@ -1,9 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, Validators, FormControl } from '../../../node_modules/@angular/forms';
-import { UserService } from '../user.service';
+import { Router } from '@angular/router';
 import { NgRedux } from '../../../node_modules/@angular-redux/store';
+import { FormControl, FormGroup, Validators } from '../../../node_modules/@angular/forms';
 import { SIGN_IN_TOKEN } from '../actions';
 import { IAppstate } from '../store';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-login',
@@ -15,7 +16,7 @@ export class LoginComponent implements OnInit {
   form: FormGroup;
   token: any;
 
-  constructor(private userService: UserService, private ngRedux: NgRedux<IAppstate>) { }
+  constructor(private userService: UserService, private ngRedux: NgRedux<IAppstate>, private router: Router) { }
 
   ngOnInit() {
     this.form = new FormGroup({
@@ -34,6 +35,7 @@ export class LoginComponent implements OnInit {
           type: SIGN_IN_TOKEN,
           data: response.json().token
         })
+        this.router.navigate(['/'])
       }
     })
   }

@@ -1,10 +1,11 @@
 <div class="ui card">
   <div class="image">
+    <div class="ui bottom attached label">{{clase.escuela_name}}</div>
     <img src="../../assets/images/ClassCards/screen-profesor2.png">
   </div>
   <div class="cardTitle">
     <p>{{clase.name}}<br>
-    {{clase.group_description}} / {{sDate}} - {{eDate}}</p>
+      {{clase.group_description}} / {{sDate}} - {{eDate}}</p>
   </div>
   <div class="botonesCard">
     <p id="lista" [routerLink]="['/clase', clase.idclasse]">Lista</p>

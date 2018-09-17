@@ -17,4 +17,25 @@ export class ClassService {
     return this.http.post(url, { token: token_id }).toPromise()
   }
 
+  getAllEscuelas() {
+    let url = `${this.baseUrl}/escuelas/all`
+    return this.http.get(url).toPromise()
+  }
+
+  getAllGroups() {
+    let url = `${this.baseUrl}/groups/all`
+    return this.http.get(url).toPromise()
+  }
+
+  addNewCourse(values) {
+    let url = `${this.baseUrl}/new`
+    return this.http.post(url, {
+      id_group: values.tipo,
+      id_escuela: values.escuela,
+      start_date: values.fecha_inicio,
+      end_date: values.fecha_fin,
+      id_teacher: values.profesor
+    }).toPromise()
+  }
+
 }
