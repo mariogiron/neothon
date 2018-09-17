@@ -21,7 +21,7 @@
   </div>
 </div>
 
-<!-- Modal -->
+<!-- Modal -DNI Adress Phone -->
 <div class="modal fade" id="addStudentModal" tabindex="-1" role="dialog" aria-labelledby="addCourseModal" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -34,30 +34,26 @@
       <div class="modal-body">
         <form [formGroup]="formularioAddCourse" (ngSubmit)="onSubmitNewCourse()">
           <fieldset id="formulariocrear">
-            <label aria-label="nombre" class="LabelNombre">Curso</label>
-            <select class="input" formControlName="tipo">
-              <option *ngFor="let group of groups" [value]="group.idgroups">{{group.name}} / {{group.description}}</option>
-            </select>
+            <label aria-label="name" class="mt-4">Nombre</label>
+            <input type="text" class="inputFechaInicio" formControlName="name">
 
-            <label aria-label="categoria" class="mt-4">Escuela</label>
-            <select class="input" formControlName="escuela">
-              <option *ngFor="let escuela of escuelas" [value]="escuela.idescuela">{{escuela.name}}</option>
-            </select>
+            <label aria-label="surname" class="">Apellido</label>
+            <input type="text" class="InputTelefono" formControlName="surname">
 
-            <label aria-label="telefono" class="mt-4">Fecha Inicio</label>
-            <input type="date" class="inputFechaInicio" placeholder="Fecha de inicio del curso" formControlName="fecha_inicio">
+            <label aria-label="email" class="">Email</label>
+            <input type="text" class="InputTelefono" formControlName="email">
 
-            <label aria-label="telefono" class="">Fecha Fin</label>
-            <input type="date" class="InputTelefono" placeholder="Fecha de finalización del curso" formControlName="fecha_fin">
+            <label aria-label="dni" class="">DNI</label>
+            <input type="text" class="InputTelefono" formControlName="dni">
 
-            <label aria-label="categoria" class="">Profesor</label>
-            <select class="input" formControlName="profesor">
-              <option *ngFor="let profesor of teachers" [value]="profesor.idusers">{{profesor.name}}
-                {{profesor.surname}}</option>
-            </select>
+            <label aria-label="address" class="">Dirección</label>
+            <input type="text" class="InputTelefono" formControlName="address">
+
+            <label aria-label="phone" class="">Teléfono</label>
+            <input type="text" class="InputTelefono" formControlName="phone">
           </fieldset>
           <div class="text-center mb-3">
-            <input type="submit" value="Añadir Curso" class="Btn text-center mt-4">
+            <input type="submit" value="Añadir Alumno" class="Btn text-center mt-4">
           </div>
         </form>
       </div>
