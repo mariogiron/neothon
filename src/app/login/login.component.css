@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
+
+*:focus {
+    outline: none;
+}
+
 .login{
     height: 100vh !important;
 }
@@ -100,4 +105,9 @@
     position: absolute;
     top: 50%;
     margin-top: -177px;
+}
+
+.errores p{
+    font-size: 0.9em !important;
+    color: tomato !important;
 }

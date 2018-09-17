@@ -14,6 +14,9 @@
                 <input type="text" placeholder="Introduce tu email" formControlName="email">
                 <p>Contraseña</p>
                 <input type="password" placeholder="Introduce tu contraseña" formControlName="password">
+                <div *ngIf="errors" class="errores">
+                  <p>{{errors}}</p>
+                </div>
                 <input type="checkbox">
                 <p class="recordarPass">Recordar contraseña</p>
                 <p class="olvidoPass">¿Has olvidado tu contraseña?</p>

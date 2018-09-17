@@ -15,6 +15,7 @@ export class LoginComponent implements OnInit {
 
   form: FormGroup;
   token: any;
+  errors: any;
 
   constructor(private userService: UserService, private ngRedux: NgRedux<IAppstate>, private router: Router) { }
 
@@ -28,7 +29,7 @@ export class LoginComponent implements OnInit {
   login(pUserData){
     this.userService.getUser(pUserData).then((response) => {
       if(response.json().err){
-        console.log(response.json().err);
+        this.errors = (response.json().err);
       }else{
         console.log(response.json());
         this.ngRedux.dispatch({
