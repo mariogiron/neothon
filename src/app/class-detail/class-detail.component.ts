@@ -26,11 +26,12 @@ export class ClassDetailComponent implements OnInit {
     this.date = moment(new Date()).format("DD/MM/YYYY")
 
     this.formularioAddCourse = new FormGroup({
-      tipo: new FormControl(''),
-      escuela: new FormControl(''),
-      fecha_inicio: new FormControl(''),
-      fecha_fin: new FormControl(''),
-      profesor: new FormControl('')
+      name: new FormControl(''),
+      surname: new FormControl(''),
+      email: new FormControl(''),
+      dni: new FormControl(''),
+      address: new FormControl(''),
+      phone: new FormControl('')
     })
   }
 
