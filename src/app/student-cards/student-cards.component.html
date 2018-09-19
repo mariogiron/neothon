@@ -4,9 +4,10 @@
     <div class="cont">
       <p class="nombreAlumno"> {{student.name}} {{student.surname}}</p>
       <p class="faltas">Faltas: 2</p>
-      <p class="retrasos">Retrasos: 6</p>
     </div>
     <div class="cont">
-      <button class="botonFicha"><p>Falta</p></button></div>
+      <button class="botonFichaPresente" *ngIf="student.incident_type == -1" (click)="changeStatus(true)"><p>Presente</p></button>
+      <button class="botonFichaFalta" *ngIf="student.incident_type =='0'" (click)="changeStatus(false)"><p>Falta</p></button>
+    </div>
   </div>
 </div>

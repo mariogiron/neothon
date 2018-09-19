@@ -34,7 +34,10 @@ export class LoginComponent implements OnInit {
         console.log(response.json());
         this.ngRedux.dispatch({
           type: SIGN_IN_TOKEN,
-          data: response.json().token
+          data: {
+            token: response.json().token,
+            user_type: response.json().type
+          }
         })
         this.router.navigate(['/'])
       }

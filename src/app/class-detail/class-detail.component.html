@@ -8,16 +8,16 @@
       </div>
     </div>
 
-    <input type="date" value="{{date}}">
+    <input type="date" class="mb-5" value="{{date}}" (change)="onChangeDate($event.target.value)">
 
-    <p class="lista">Lista de alumnos de <span>Bootcamp Full-Stack. Jul-Sept. Madrid</span></p>
+    <p class="lista">Lista de alumnos de <span>{{class?.name}}. Jul-Sept. Madrid</span></p>
 
-    <app-student-cards class="col-12 studentCards" *ngFor="let card of studentCards" [student]="card"></app-student-cards>
+    <app-student-cards class="col-12 studentCards" *ngFor="let card of studentCards" [student]="card" (statusChange)="onStatusChange($event)"></app-student-cards>
 
-    <div class="col-12 add_student" data-toggle="modal" data-target="#addStudentModal" >
+    <div class="col-12 add_student" data-toggle="modal" data-target="#addStudentModal" *ngIf="ngRedux.getState().user_type == '0'">
       <p class="plus_course">
         <img src="assets/images/plus.png" class="img-plus"><br>
-        Añadir Curso
+        Añadir Alumno
       </p>
     </div>
   </div>
@@ -34,7 +34,7 @@
         </button>
       </div>
       <div class="modal-body">
-        <form [formGroup]="formularioAddCourse" (ngSubmit)="onSubmitNewCourse()">
+        <form [formGroup]="formularioAddCourse">
           <fieldset id="formulariocrear">
             <label aria-label="name" class="mt-4">Nombre</label>
             <input type="text" class="inputFechaInicio" formControlName="name">

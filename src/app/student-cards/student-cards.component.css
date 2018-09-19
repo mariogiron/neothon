@@ -50,7 +50,7 @@
     margin-top: 5px;
 }
 
-.botonFicha{
+.botonFichaFalta{
     width: 205.1px;
     height: 46px;
     border-radius: 23px;
@@ -62,9 +62,26 @@
     cursor: pointer;
 }
 
-.botonFicha:hover{
+.botonFichaPresente{
+  width: 205.1px;
+  height: 46px;
+  border-radius: 23px;
+  background-color: rgb(47, 190, 109);
+  border: 0px;
+  position: absolute;
+  top: 42px;
+  right: 117px;
+  cursor: pointer;
+}
+
+.botonFichaFalta:hover{
     background-color: #454545;
     transition: 0.7s;
+}
+
+.botonFichaPresente:hover{
+  background-color: #454545;
+  transition: 0.7s;
 }
 
 .cont{
@@ -72,7 +89,7 @@
     float: left;
 }
 
-.botonFicha p{
+.botonFichaFalta p{
     text-align: center;
     height: 24px;
     font-family: Lato;
@@ -83,4 +100,17 @@
     line-height: normal;
     letter-spacing: normal;
     color: #ffffff;
+}
+
+.botonFichaPresente p{
+  text-align: center;
+  height: 24px;
+  font-family: Lato;
+  font-size: 20px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  color: #ffffff;
 }

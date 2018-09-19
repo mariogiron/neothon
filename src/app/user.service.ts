@@ -13,10 +13,20 @@ export class UserService {
     return this.http.post(url, pUserData).toPromise();
   }
 
-  getStudents(idClase){
-    let url = `https://neothon.ngrok.io/api/students/${idClase}`;
+  getStudents(idClase, dateClass){
+    let url = `https://neothon.ngrok.io/api/class/${idClase}`;
     console.log(url)
-    return this.http.post(url, {}).toPromise();
+    return this.http.post(url, {fecha: dateClass}).toPromise();
+  }
+
+  changeStudentStatus(alumnoId, falta, fechaCambio) {
+    console.log(alumnoId, falta, fechaCambio)
+    let url = 'https://neothon.ngrok.io/api/students/status'
+    return this.http.post(url, {
+      alumno_id: alumnoId,
+      falta: falta,
+      fecha_cambio: fechaCambio
+    }).toPromise()
   }
 }
 
