@@ -9,7 +9,7 @@ export class ClassService {
   baseUrl: string
 
   constructor(private http: Http) {
-    this.baseUrl = 'https://neothon.ngrok.io/api/class'
+    this.baseUrl = 'https://hackathon-p2.herokuapp.com/api/class'
   }
 
   getAllClasses(token_id) {
